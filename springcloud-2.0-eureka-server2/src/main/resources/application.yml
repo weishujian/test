@@ -1,0 +1,13 @@
+server:
+   port: 9100
+spring:
+   application:
+      name: app-sunline-eureka
+eureka:
+   instance:
+      hostname: 139.224.134.166
+   client:
+      serviceUrl:
+         defaultZone: http://${eureka.instance.hostname}:8100/eureka/, http://${eureka.instance.hostname}:9200/eureka/
+      register-with-eureka: true
+      fetch-registry: true
